@@ -95,52 +95,50 @@
             	box-shadow: 0 -3px 0 0 #007bff; /* Active tab underline */
         	}
 		
- /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            /* On mobile, the nav bar is not fixed at the top */
-            .top-nav {
-                position: fixed; /* Removed fixed positioning */
-            }
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+    /* Adjust the hamburger icon and navigation behavior for mobile */
+    .top-nav {
+        position: relative; /* No fixed positioning on mobile */
+    }
 
-            .top-nav ul {
-                display: none;
-                width: 100%;
-                flex-direction: column;
-                text-align: center;
-                background-color: #2e3a47; /* Same as the nav background */
-                position: absolute;
-                top: 60px; /* Ensures the nav items appear just below the navbar */
-                left: 0;
-                z-index: 999;
-            }
+    .top-nav ul {
+        position: fixed; /* Keep the list fixed at the top */
+        top: 60px; /* Ensure it appears below the hamburger icon */
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        background-color: #2e3a47;
+        display: none; /* Hide by default on mobile */
+        z-index: 999; /* Ensure it's on top */
+    }
 
-            .top-nav ul li {
-                margin: 0; /* Remove margin to avoid gap */
-            }
+    .top-nav ul li {
+        margin: 0; /* Remove margin to avoid gaps */
+    }
 
-            .top-nav ul li a {
-                padding: 10px 15px; /* Adjust padding to make it smaller */
-                font-size: 16px; /* Smaller font for mobile */
-            }
+    .top-nav ul li a {
+        padding: 10px 15px; /* Adjust padding to be smaller for mobile */
+        font-size: 16px;
+        width: 100%; /* Make the links full width for easier clicking/tapping */
+    }
 
-            /* Hamburger Icon Style: Fixed to the top */
-            .hamburger {
-                display: block; /* Show hamburger icon */
-                font-size: 30px; /* Make the hamburger icon bigger */
-                color: white;
-                cursor: pointer;
-                margin-left: 10px;
-                position: fixed; /* Fix the position of the hamburger icon */
-                top: 10px; /* Distance from the top of the screen */
-                left: 10px; /* Distance from the left edge */
-                z-index: 1001; /* Ensure it stays on top */
-            }
+    /* Show hamburger icon and menu block on mobile */
+    .hamburger {
+        display: block; /* Show hamburger icon */
+        font-size: 30px; /* Bigger hamburger icon */
+        background-color: #555; /* Solid grey background */
+        padding: 15px; /* Padding to make it larger */
+        color: white; /* White color for the icon */
+        text-align: center;
+        z-index: 1000; /* Ensure it stays above the navigation menu */
+    }
 
-            /* Show the menu when hamburger icon is clicked */
-            .top-nav.active ul {
-                display: block; /* Display the menu when active */
-            }
-        }
+    .top-nav.active ul {
+        display: block; /* Show the menu when hamburger is clicked */
+    }
+}
 
 		
 		/* Smooth scrolling */
