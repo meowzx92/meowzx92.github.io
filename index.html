@@ -125,15 +125,23 @@
     }
 
     /* Show hamburger icon and menu block on mobile */
-    .hamburger {
-        display: block; /* Show hamburger icon */
-        font-size: 30px; /* Bigger hamburger icon */
-        background-color: #555; /* Solid grey background */
-        padding: 15px; /* Padding to make it larger */
-        color: white; /* White color for the icon */
-        text-align: center;
-        z-index: 1000; /* Ensure it stays above the navigation menu */
-    }
+.hamburger {
+    display: block;
+    font-size: 40px; /* Larger icon size */
+    color: white; /* Icon color */
+    cursor: pointer;
+    padding: 15px 20px; /* Add padding around the hamburger icon */
+    background-color: #333; /* Dark grey background for the hamburger */
+    border: none;
+    text-align: center;
+    margin: 0; /* No margin to prevent extra space */
+    width: 100%; /* Ensure hamburger is wide enough for touch */
+    box-sizing: border-box; /* Include padding in the total width */
+    position: fixed; /* Keep the hamburger fixed at the top */
+    top: 0; /* Position it at the very top */
+    left: 0;
+    z-index: 1001; /* Ensure it stays on top of the navigation */
+}
 
     .top-nav.active ul {
         display: block; /* Show the menu when hamburger is clicked */
