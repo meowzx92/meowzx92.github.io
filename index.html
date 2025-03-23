@@ -74,7 +74,7 @@
             	text-decoration: none;
             	font-size: 18px;
             	font-weight: 500;
-            	padding: 10px 20px;
+            	padding: 10px 15px;
             	border-radius: 5px;
             	position: relative;
             	transition: all 0.3s ease-in-out;
@@ -172,37 +172,12 @@
 				</nav>
 			</div>
 			
-			<!-- Sections for content demonstration -->
-    				<section id="one">Overview Section</section>
-    				<section id="two">Research Projects Section</section>
-    				<section id="three">Publication Lists Section</section>
-   				<section id="four">Field Campaigns Section</section>
-    				<section id="five">Real-time AR Forecast Section</section>
-    				<section id="six">Collaboration Section</section>
-    				<section id="seven">Contact Section</section>
-		
-			<script>
-        			// Function to toggle the mobile menu when the hamburger icon is clicked
-        			function toggleMenu() {
-            			const nav = document.querySelector('.top-nav');
-            			nav.classList.toggle('active'); // Toggle the 'active' class to show/hide the menu
-        			}
-
-        			// JavaScript to handle active class toggle when the user clicks on a link
-        			const links = document.querySelectorAll('.top-nav ul li a');
-        			links.forEach(link => {
-            				link.addEventListener('click', function() {
-                				links.forEach(item => item.classList.remove('active')); // Remove active class from all links
-                				this.classList.add('active'); // Add active class to the clicked link
-            				});
-        			});
-    			</script>
 		       
 			<div id="main">
    				<!-- One -->
     				<section id="one">
 					<header class="major" style="text-align: center; padding: 20px 20px; background-color: #f4f4f4; border-radius: 8px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
-   					<h2 style="font-size: 2rem; color: #333; margin-bottom: 15px;">
+   					<h2 style="font-size: 2rem; color: #333; margin-bottom: 15px; margin-top: 10px;">
         					Extreme Weather over Antarctica and Beyond<br />
         					Growing Influence of Atmospheric Rivers
     					</h2>
@@ -505,7 +480,23 @@
 							</div>
 						</div>
 					</section>
+			
+			<script>
+        			// Function to toggle the mobile menu when the hamburger icon is clicked
+        			function toggleMenu() {
+            			const nav = document.querySelector('.top-nav');
+            			nav.classList.toggle('active'); // Toggle the 'active' class to show/hide the menu
+        			}
 
+        			// JavaScript to handle active class toggle when the user clicks on a link
+        			const links = document.querySelectorAll('.top-nav ul li a');
+        			links.forEach(link => {
+            				link.addEventListener('click', function() {
+                				links.forEach(item => item.classList.remove('active')); // Remove active class from all links
+                				this.classList.add('active'); // Add active class to the clicked link
+            				});
+        			});
+    			</script>
 				<!-- Six -->
 				<!--
 					<section id="six">
