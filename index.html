@@ -95,39 +95,44 @@
             	box-shadow: 0 -3px 0 0 #007bff; /* Active tab underline */
         	}
 		
-       		/* Responsive Design */
+		/* Responsive Design */
         	@media screen and (max-width: 768px) {
-            .	top-nav ul {
-                display: none;
-		top: -50px;
-                width: 100%;
-                flex-direction: column;
-                text-align: center;
-                background-color: #2e3a47; /* Same as the nav background */
-                position: absolute;
-                left: 0;
-                z-index: 999;
+            	/* On mobile, the nav bar is not fixed at the top */
+            	.top-nav {
+                	position: relative; /* Remove fixed position */
             	}
-		
-		.top-nav ul li {
+
+            	.top-nav ul {
+                	display: none;
+        		width: 100%;
+                	flex-direction: column;
+                	text-align: center;
+                	background-color: #2e3a47; /* Same as the nav background */
+                	position: absolute;
+                	top: 60px; /* Adjusted to make it appear below the nav */
+                	left: 0;
+                	z-index: 999;
+            	}
+
+           	.top-nav ul li {
                 	margin: 10px 0;
-        	}
+            	}
 
             	.top-nav ul li a {
                 	padding: 15px 20px;
                 	font-size: 18px;
             	}
 
-                .hamburger {
+            	.hamburger {
                 	display: block; /* Show hamburger icon */
-                	font-size: 30px; /* Make the hamburger icon bigger */
+                	font-size: 20px; /* Make the hamburger icon bigger */
                 	color: white;
                 	cursor: pointer;
                 	margin-left: 10px;
-                }
+            	}
 
             	.top-nav.active ul {
-                display: block; /* Display the menu when active */
+                	display: block; /* Display the menu when active */
             	}
         	}
 
