@@ -95,58 +95,58 @@
             	box-shadow: 0 -3px 0 0 #5a91cc; /* Active tab underline */
         	}
 		
-/* Responsive Design for smaller screens */
-@media screen and (max-width: 768px) {
-    /* Adjust the hamburger icon and navigation behavior for mobile */
-    .top-nav {
-        position: relative; /* No fixed positioning on mobile */
-    }
+		/* Responsive Design for smaller screens */
+		@media screen and (max-width: 768px) {
+    		/* Adjust the hamburger icon and navigation behavior for mobile */
+    		.top-nav {
+        		position: relative; /* No fixed positioning on mobile */
+    		}
 
-    .top-nav ul {
-        position: fixed; /* Keep the list fixed at the top */
-        top: 60px; /* Ensure it appears below the hamburger icon */
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        text-align: left;
-        background-color: #2e3a47;
-        display: none; /* Hide by default on mobile */
-        z-index: 999; /* Ensure it's on top */
-    }
+    		.top-nav ul {
+        		position: fixed; /* Keep the list fixed at the top */
+        		top: 60px; /* Ensure it appears below the hamburger icon */
+        		left: 0;
+        		width: 100%;
+        		flex-direction: column;
+        		text-align: left;
+        		background-color: #2e3a47;
+        		display: none; /* Hide by default on mobile */
+        		z-index: 999; /* Ensure it's on top */
+    		}
 
-    .top-nav ul li {
-        margin: 0; /* Remove margin to avoid gaps */
-    }
+    		.top-nav ul li {
+        	margin: 0; /* Remove margin to avoid gaps */
+    		}
 
-    .top-nav ul li a {
-        padding: 10px 15px; /* Adjust padding to be smaller for mobile */
-        font-size: 16px;
-        width: 100%; /* Make the links full width for easier clicking/tapping */
-    }
+    		.top-nav ul li a {
+        	padding: 8px 12px; /* Adjust padding to be smaller for mobile */
+        	font-size: 14px;
+        	width: 100%; /* Make the links full width for easier clicking/tapping */
+    		}
+			
+		/* Show hamburger icon and menu block on mobile */
+        	.hamburger {
+           		display: block; /* Hide by default */
+            	font-size: 40px; /* Larger icon size */
+            	color: white; /* Icon color */
+            	cursor: pointer;
+            	padding: 15px 20px; /* Add padding around the hamburger icon */
+            	background-color: #333; /* Dark grey background for the hamburger */
+            	border: none;
+            	text-align: left;
+            	margin: 0; /* No margin to prevent extra space */
+            	width: 100%; /* Ensure hamburger is wide enough for touch */
+            	box-sizing: border-box; /* Include padding in the total width */
+            	position: fixed; /* Keep the hamburger fixed at the top */
+            	top: 0; /* Position it at the very top */
+            	left: 0;
+            	z-index: 1000; /* Ensure it stays on top of the navigation */
+        	}
 
-    /* Show hamburger icon and menu block on mobile */
-        .hamburger {
-            display: block; /* Hide by default */
-            font-size: 40px; /* Larger icon size */
-            color: white; /* Icon color */
-            cursor: pointer;
-            padding: 15px 20px; /* Add padding around the hamburger icon */
-            background-color: #333; /* Dark grey background for the hamburger */
-            border: none;
-            text-align: left;
-            margin: 0; /* No margin to prevent extra space */
-            width: 100%; /* Ensure hamburger is wide enough for touch */
-            box-sizing: border-box; /* Include padding in the total width */
-            position: fixed; /* Keep the hamburger fixed at the top */
-            top: 0; /* Position it at the very top */
-            left: 0;
-            z-index: 1001; /* Ensure it stays on top of the navigation */
-        }
-
-    .top-nav.active ul {
-        display: block; /* Show the menu when hamburger is clicked */
-    }
-}
+    		.top-nav.active ul {
+        	display: block; /* Show the menu when hamburger is clicked */
+    		}
+		}
 
 		
 		/* Smooth scrolling */
