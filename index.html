@@ -94,6 +94,59 @@
             	font-weight: bold;
             	box-shadow: 0 -3px 0 0 #007bff; /* Active tab underline */
         	}
+		
+       		/* Responsive Design */
+        	@media screen and (max-width: 768px) {
+            .	top-nav ul {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+                background-color: #2e3a47; /* Same as the nav background */
+                position: absolute;
+                top: 60px; /* Adjusted to make it appear below the nav */
+                left: 0;
+                z-index: 999;
+            	}
+		
+		.top-nav ul li {
+                	margin: 10px 0;
+        	}
+
+            	.top-nav ul li a {
+                	padding: 15px 20px;
+                	font-size: 18px;
+            	}
+
+            	.hamburger {
+                display: block; /* Show hamburger icon */
+            	}
+
+            	.top-nav.active ul {
+                display: block; /* Display the menu when active */
+            	}
+        	}
+
+		
+		/* Smooth scrolling */
+        	html {
+            		scroll-behavior: smooth;
+        	}
+		
+		/* Section styles for demonstration */
+         	section {
+            		height: 100vh;
+            		padding: 20px;
+            		margin-top: 60px;
+        	}
+
+        	#one { background-color: lightcoral; }
+        	#two { background-color: lightblue; }
+        	#three { background-color: lightgreen; }
+        	#four { background-color: lightgoldenrodyellow; }
+        	#five { background-color: lightseagreen; }
+        	#six { background-color: lightpink; }
+        	#seven { background-color: lightsalmon; }
     	</style>
 		
 		<!-- Header -->
