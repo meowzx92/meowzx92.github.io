@@ -95,50 +95,52 @@
             	box-shadow: 0 -3px 0 0 #007bff; /* Active tab underline */
         	}
 		
-		/* Responsive Design */
-        	@media screen and (max-width: 768px) {
-            	/* On mobile, the nav bar is not fixed at the top */
-            	.top-nav {
-                	position: fixed; /* Remove fixed position */
-            	}
+ /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            /* On mobile, the nav bar is not fixed at the top */
+            .top-nav {
+                position: relative; /* Removed fixed positioning */
+            }
 
-            	.top-nav ul {
-                	display: none;
-        		width: 100%;
-                	flex-direction: column;
-                	text-align: center;
-                	background-color: #2e3a47; /* Same as the nav background */
-                	position: absolute;
-                	top: 60px; /* Adjusted to make it appear below the nav */
-                	left: 0;
-                	z-index: 999;
-            	}
+            .top-nav ul {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+                background-color: #2e3a47; /* Same as the nav background */
+                position: absolute;
+                top: 60px; /* Adjusted to make it appear directly below the nav bar */
+                left: 0;
+                z-index: 999;
+            }
 
-           	.top-nav ul li {
-                	margin: 10px 0;
-            	}
+            .top-nav ul li {
+                margin: 0; /* Remove margin to avoid gap */
+            }
 
-            	.top-nav ul li a {
-                	padding: 15px 20px;
-                	font-size: 18px;
-            	}
+            .top-nav ul li a {
+                padding: 10px 15px; /* Adjust padding to make it smaller */
+                font-size: 16px; /* Smaller font for mobile */
+            }
 
-            	.hamburger {
-                	display: block; /* Show hamburger icon */
-                	font-size: 30px; /* Make the hamburger icon bigger */
-                	color: white;
-                	cursor: pointer;
-			position: fixed; /* Fix the position of the hamburger icon */
-                	top: 20px; /* Distance from the top of the screen */
-                	left: 20px; /* Distance from the left edge */
-                	z-index: 1001; /* Ensure it stays on top */
-                	margin-left: 10px;
-            	}
+            /* Hamburger Icon Style: Fixed to the top */
+            .hamburger {
+                display: block; /* Show hamburger icon */
+                font-size: 30px; /* Make the hamburger icon bigger */
+                color: white;
+                cursor: pointer;
+                margin-left: 10px;
+                position: fixed; /* Fix the position of the hamburger icon */
+                top: 10px; /* Distance from the top of the screen */
+                left: 10px; /* Distance from the left edge */
+                z-index: 1001; /* Ensure it stays on top */
+            }
 
-            	.top-nav.active ul {
-                	display: block; /* Display the menu when active */
-            	}
-        	}
+            /* Show the menu when hamburger icon is clicked */
+            .top-nav.active ul {
+                display: block; /* Display the menu when active */
+            }
+        }
 
 		
 		/* Smooth scrolling */
