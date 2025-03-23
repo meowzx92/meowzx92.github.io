@@ -518,6 +518,7 @@
             				});
         			});
     			</script>
+				
 			<script>
    				window.onload = function() {
       					document.getElementById('one').scrollIntoView({
@@ -526,7 +527,28 @@
      					});
    				};
 			</script>
-				
+			<script>
+  				// Function to handle smooth scroll and stop above the section header
+  				document.addEventListener('DOMContentLoaded', function() {
+    				const links = document.querySelectorAll('a[href^="#"]'); // Select all anchor links
+
+    				links.forEach(link => {
+      				link.addEventListener('click', function(event) {
+        				event.preventDefault(); // Prevent the default scroll behavior
+
+        			// Get the target section using the href attribute
+        			const targetId = link.getAttribute('href').substring(1); // Remove the '#' symbol
+       				const targetElement = document.getElementById(targetId);
+
+        			// Scroll to the target element with an offset (adjust the offset as needed)
+        			window.scrollTo({
+          				top: targetElement.offsetTop - 50, // 50px offset from the top
+          				behavior: 'smooth', // Smooth scroll
+        			});
+      				});
+    				});
+  				});
+			</script>
 				<!-- Six -->
 				<!--
 					<section id="six">
