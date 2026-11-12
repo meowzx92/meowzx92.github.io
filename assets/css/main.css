@@ -2725,6 +2725,12 @@ input, select, textarea {
 			overflow-wrap: anywhere;
 		}
 
+		#main > section > h2,
+		#main > section > header.major h2 {
+			color: #2e3a47;
+			font-weight: 700;
+		}
+
 		#main > section {
 			border-top: solid 2px #efefef;
 			margin: 4em 0 0 0;
