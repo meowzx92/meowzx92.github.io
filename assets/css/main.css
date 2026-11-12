@@ -2559,6 +2559,7 @@ input, select, textarea {
 
 		.work-item .image {
 			margin: 0 0 1.5em 0;
+			max-width: 32rem;
 		}
 
 		.work-item h3 {
@@ -2567,10 +2568,34 @@ input, select, textarea {
 		}
 
 		.work-item p {
-			font-size: 0.8em;
+			font-size: 1em;
 			line-height: 1.5em;
 			margin: 0;
 		}
+
+	.overview-figure {
+		display: block;
+		width: 100%;
+		max-width: 50rem;
+		height: auto;
+		margin-bottom: 2px;
+	}
+
+	.spotlight-figure {
+		display: block;
+		width: 100%;
+		max-width: 26rem;
+		height: auto;
+		border-radius: 0.35em;
+	}
+
+	#six .work-item img {
+		max-width: min(100%, 12rem);
+	}
+
+	#six .work-item {
+		flex: 1 1 calc(25% - 20px);
+	}
 
 /* Header */
 
@@ -2686,6 +2711,10 @@ input, select, textarea {
 		padding: 8em 4em 4em 4em;
 		width: calc(100% - 21%);
 	}
+
+		#main a {
+			overflow-wrap: anywhere;
+		}
 
 		#main > section {
 			border-top: solid 2px #efefef;
@@ -2984,7 +3013,7 @@ input, select, textarea {
 		/* Basic */
 
 			body, input, select, textarea {
-				font-size: 12pt;
+				font-size: 13.5pt;
 			}
 
 	}
@@ -2996,7 +3025,7 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				padding: 6em 3em 3em 3em;
+				padding: 6em 0.75em 3em 0.75em;
 				width: 18%;
 			}
 
@@ -3173,6 +3202,14 @@ input, select, textarea {
 			#main {
 				padding: 2.25em 1.5em 0.25em 1.5em;
 			}
+
+				.spotlight-figure {
+					margin-bottom: 1em;
+				}
+
+				#six .work-item {
+					flex-basis: calc(50% - 20px);
+				}
 
 				#main > section {
 					margin: 2.25em 0 0 0;
