@@ -24,7 +24,7 @@
             	border: none;
             	text-align: left;
             	outline: none;
-            	font-size: 15px;
+            	font-size: 1em;
         	}
 
        		/* Style for the active button or hover effect */
@@ -94,6 +94,16 @@
             	font-weight: bold;
             	box-shadow: 0 -3px 0 0 #5a91cc; /* Active tab underline */
         	}
+
+		@media screen and (min-width: 769px) and (max-width: 1100px) {
+			.top-nav ul li {
+				margin: 0 3px;
+			}
+
+			.top-nav ul li a {
+				font-size: 16px;
+			}
+		}
 		
 		/* Responsive Design for smaller screens */
 		@media screen and (max-width: 768px) {
@@ -120,7 +130,7 @@
 
     		.top-nav ul li a {
         	padding: 6px 6px; /* Adjust padding to be smaller for mobile */
-        	font-size: 14px;
+        	font-size: 16px;
 		color: white; /* Text color */
         	width: 100%; /* Make the links full width for easier clicking/tapping */
     		}
@@ -221,7 +231,7 @@
                 				large amounts of moisture. These complex dynamics create significant uncertainty 
                 				in future Antarctic ice mass balance and sea level rise (SLR) projections. 
             				</p>
-            				<img src="images/fulls/Schematic_Plot.jpg" alt="Figure 1" style="width: 95%; margin-bottom: 2px;">
+            				<img class="overview-figure" src="images/fulls/Schematic_Plot.jpg" alt="Figure 1">
         			</div>
         
         			<div style="text-align: left;">
@@ -232,7 +242,7 @@
 					on the <b>characteristics of the AR</b>, whether it is a singular extreme event or part of a <b>sequence of events</b>, and how it 
 					<b>interacts with pre-existing weather systems</b>.
             			</p>
-            			<img src="images/fulls/FlowChart.jpg" alt="Figure 2" style="width: 95%; margin-bottom: 2px;">
+            			<img class="overview-figure" src="images/fulls/FlowChart.jpg" alt="Figure 2">
         			</div>  
         
 
@@ -245,21 +255,18 @@
 					such as <b>flooding, high-wind damage, and glacial failure</b>. Additionally, it will assess the vulnerability of affected regions and 
 					support adaptation efforts in response to climate change.
 					</p>
-				<img src="images/fulls/Cover3.jpg" alt="Figure 3" style="width: 95%; margin-bottom: 2px;">
+				<img class="overview-figure" src="images/fulls/Cover3.jpg" alt="Figure 3">
     				</section>
 
 				<!-- Research spotlights -->
 				<section id="research-spotlights">
 					<h2>Research Spotlights</h2>
 					<div class="row">
-						<div class="col-4 col-12-xsmall">
-							<a href="https://www.nature.com/articles/s41467-026-71359-2/figures/6"
-							   class="image fit thumb" target="_blank" rel="noopener noreferrer">
-								<img src="images/fulls/research-spotlight-larsen-c.png"
-								     alt="3D simulations of temperature and water vapor mixing ratio over Larsen C" />
-							</a>
+						<div class="col-4 col-12-small">
+							<img class="spotlight-figure" src="images/fulls/research-spotlight-larsen-c.png"
+							     alt="3D simulations of temperature and water vapor mixing ratio over Larsen C" />
 						</div>
-						<div class="col-8 col-12-xsmall">
+						<div class="col-8 col-12-small">
 							<h3>New paper: Föhn-induced melting over Larsen C</h3>
 							<p>
 								Atmospheric rivers can strengthen föhn warming over the
@@ -285,12 +292,12 @@
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/RP01.jpg" class="image fit thumb"><img src="images/thumbs/RP01_Cover.jpg" alt="" /></a>
 								<h3>1. Surface Melting Over Antarctica</h3>
-								<p style="font-size: 16px">NSF OPP <a href="https://www.usap-dc.org/view/project/p0010295" target="_blank">#2229392</a> and <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2331992&HistoricalAwards=false" target="_blank">#2331992</a></p>
+								<p style="font-size: 1em">NSF OPP <a href="https://www.usap-dc.org/view/project/p0010295" target="_blank">#2229392</a> and <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2331992&HistoricalAwards=false" target="_blank">#2331992</a></p>
 								<a href="https://rmets.onlinelibrary.wiley.com/doi/abs/10.1002/qj.3460" target="_blank">Zou et al. 2019</a>, 
         							<a href="https://rmets.onlinelibrary.wiley.com/doi/abs/10.1002/qj.4104" target="_blank">2021a</a>, 
         							<a href="https://rmets.onlinelibrary.wiley.com/doi/abs/10.1002/qj.4105" target="_blank">b</a>, 
         							<a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022JD038138" target="_blank">2023a</a>
-								<p style="font-size: 14px; color: #fff;">
+								<p style="font-size: 1rem; color: #fff;">
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#Melt</span>
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px;">#AR&Foehn</span>
 								</p>
@@ -299,10 +306,10 @@
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/RP02.jpg" class="image fit thumb"><img src="images/thumbs/RP02_Cover.jpg" alt="" /></a>
 								<h3>2. Antarctica Under Global Climate Change </h3>
-								<p style="font-size: 16px">Collaborated with Ohio State </p>
+								<p style="font-size: 1em">Collaborated with Ohio State </p>
 								<a href="https://journals.ametsoc.org/view/journals/clim/32/20/jcli-d-18-0565.1.xml" target="_blank">Jones et al. 2019</a>,
 								<a href="https://doi.org/10.1029/2024GL111907" target="_blank">Bromwich et al. 2024b</a>.</li>
-								<p style="font-size: 14px; color: #fff;">
+								<p style="font-size: 1rem; color: #fff;">
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#ClimateChange</span>
 									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; ">#TemperatureTrend</span>
 								</p>
@@ -311,9 +318,9 @@
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/RP03.jpg" class="image fit thumb"><img src="images/thumbs/RP03_Cover.jpg" alt="" /></a>
 								<h3>3. Surface Energy Balance (SEB) Observations</h3>
-								<p style="font-size: 16px">NSF OPP <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2331992&HistoricalAwards=false" target="_blank">#2331992</a> & UW-Madison</p>
+								<p style="font-size: 1em">NSF OPP <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2331992&HistoricalAwards=false" target="_blank">#2331992</a> & UW-Madison</p>
 								<a href="https://www.antarcticglaciers.org/glacier-processes/mass-balance/the-surface-energy-balance/" target="_blank">Why are SEB observations important?</a>
-								<p style="font-size: 14px; color: #fff;">
+								<p style="font-size: 1rem; color: #fff;">
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#SEB</span>
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px;">#AWSnetwork</span>
 								</p>
@@ -322,10 +329,10 @@
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/RP04.jpg" class="image fit thumb"><img src="images/thumbs/RP04_Cover.jpg" alt="" /></a>
 								<h3>4. AR-Induced Natural Hazards in the U.S.</h3>
-								<p style="font-size: 16px">Supported by CW3E</p>
+								<p style="font-size: 1em">Supported by CW3E</p>
 								<a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023JD039426" target="_blank">Zou et al. 2023b</a>,
 								<a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024JD042309" target="_blank">2025a</a>
-								<p style="font-size: 14px; color: #fff;">
+								<p style="font-size: 1rem; color: #fff;">
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#CompoundHazard</span>
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px;">#AR&OtherSystem</span>
 								</p>
@@ -334,9 +341,9 @@
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/RP05.jpg" class="image fit thumb"><img src="images/thumbs/RP05_Cover.jpg" alt="" /></a>
 								<h3>5. AR-related Extreme Weather over Antarctica </h3>
-								<p style="font-size: 16px">Pending at NSF OPP</p>
+								<p style="font-size: 1em">Pending at NSF OPP</p>
 								<a href="https://www.nature.com/articles/s43017-024-00638-7" target="_blank">Wille et al. 2025</a>
-								<p style="font-size: 14px; color: #fff;">
+								<p style="font-size: 1rem; color: #fff;">
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#AR&Extreme</span>
 									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px;">#CoupledModel</span>
 								</p>
@@ -345,9 +352,9 @@
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/thumbs/Coming_UP.jpg" class="image fit thumb"><img src="images/thumbs/RP06_Cover.jpg" alt="" /></a>
 								<h3>6. Expand to the Southern High Latitudes</h3>
-								<p style="font-size: 16px">In Prep</p>
+								<p style="font-size: 1em">In Prep</p>
 								<a href="https://www.arm.gov/research/campaigns/amf2024cape-k" target="_blank">ARM Observations</a>
-								<p style="font-size: 14px; color: #fff;">
+								<p style="font-size: 1rem; color: #fff;">
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#Cloud</span>
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px;">#Aerosol</span>
 								</p>							
@@ -356,23 +363,23 @@
 						
 					<h2>Other Ongoing Projects</h2>
 						<p style="margin-bottom: 0px;">The Combined Influence of Initial Condition Errors in short-wave troughs (SWTs) and ARs on the AR Forecasts: Applying the Moist Adjoint Error Energy Metric to Diagnose Cases from AR Recon (ONR #N00014-24-1-2754)</p>
-						<p style="font-size: 14px; color: #fff; margin-bottom: 4px; margin-top: 0px;">
+						<p style="font-size: 1rem; color: #fff; margin-bottom: 4px; margin-top: 0px;">
 							<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#Upstream</span>
 							<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#SWT</span>
 						</p>
 						<p style="margin-bottom: 0px;">AR-based Probable Maximum Precipitation (PMP) for Oregon (WEST Consultants, Inc.) </p>
-						<p style="font-size: 14px; color: #fff; margin-bottom: 4px; margin-top: 0px;">
+						<p style="font-size: 1rem; color: #fff; margin-bottom: 4px; margin-top: 0px;">
 							<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#PMP</span>
 							<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#ClimateChange</span>
 							<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#FutureProjection</span>
 						</p>
 						<p style="margin-bottom: 0px;"><a href="https://www.climate.gov/news-features/event-tracker/hurricane-helenes-extreme-rainfall-and-catastrophic-inland-flooding" target="_blank">Predecessor Rain Event</a> in the Southern Appalachians Prior to the Hurricane Helene's Landfall (CW3E & NOAA)</p>
-						<p style="font-size: 14px; color: #fff; margin-bottom: 4px; margin-top: 0px;">
+						<p style="font-size: 1rem; color: #fff; margin-bottom: 4px; margin-top: 0px;">
 							<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#Upstream</span>
 							<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#PredecessorRain</span>
 						</p>
 						<p style="margin-bottom: 0px;">Investigation of AR-associated Extreme Weathers over Antarctica via High-resolution Simulations and Machine Learning Models (NCAR HPC Exploratory Allocation & CW3E Summer Internship Program)</p> 
-						<p style="font-size: 14px; color: #fff; margin-bottom: 4px; margin-top: 0px;">
+						<p style="font-size: 1rem; color: #fff; margin-bottom: 4px; margin-top: 0px;">
 							<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#AI</span></li>
 						</p>
 					</section>
@@ -460,10 +467,10 @@
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/FC01.jpg" class="image fit thumb"><img src="images/thumbs/FC01_Cover.jpg" alt="" /></a>
 								<h3><a href="https://www.youtube.com/watch?v=v6xx5oyUs_A">Year of Polar Prediction - Southern Hemisphere (YOPP-SH) </a></h3><br />
-								<p style="font-size: 16px">Role: Coordinator </p>
+								<p style="font-size: 1em">Role: Coordinator </p>
 								<a href="https://journals.ametsoc.org/view/journals/bams/105/9/BAMS-D-22-0249.1.xml" target="_blank">Bromwich et al. 2024a</a>, 
 								<a href="https://doi.org/10.5194/tc-18-5239-2024" target="_blank">Zhang et al. 2024</a>
-								<p style="font-size: 14px; color: #fff;">
+								<p style="font-size: 1rem; color: #fff;">
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#Upstream</span>
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px;">#Radiosonde</span>
 								</p>	
@@ -472,9 +479,9 @@
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/thumbs/Coming_UP.jpg" class="image fit thumb"><img src="images/thumbs/Coming_UP.jpg" alt="" /></a>
 								<h3>Antarctic Peninsula surface Mass and energy balance: the role of Atmospheric Rivers and microworlds-2025 (APMAR-2025)</h3>
-								<p style="font-size: 16px">Role: Non-cost Collaborator</p>
+								<p style="font-size: 1em">Role: Non-cost Collaborator</p>
 								<a href="https://meetingorganizer.copernicus.org/EGU25/EGU25-21662.html" target="_blank">Gorodetskaya et al. 2025</a>
-								<p style="font-size: 14px; color: #fff;">
+								<p style="font-size: 1rem; color: #fff;">
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#FreezingLevel</span>
 									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#RainOnSnow</span>
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px;">#Aerosol</span>
@@ -484,8 +491,8 @@
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/thumbs/Coming_UP.jpg" class="image fit thumb"><img src="images/thumbs/FC03_Cover.jpg" alt="" /></a>
 								<h3><a href="https://www.piccaaso.org/projects/alcina/" target="_blank">Antarctic Low Cloud Interaction with Natural Aerosol (ALCINA)</a></h3>
-								<p style="font-size: 16px">Role: Model Support</p>
-								<p style="font-size: 14px; color: #fff;">
+								<p style="font-size: 1em">Role: Model Support</p>
+								<p style="font-size: 1rem; color: #fff;">
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#Cloud</span>
 									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px;">#SEB</span>
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px;">#Aerosol</span>
@@ -495,8 +502,8 @@
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/FC04.jpg" class="image fit thumb"><img src="images/thumbs/FC04_Cover.jpg" alt="" /></a>
 								<h3><a href="https://www.wcrp-climate.org/gpex-overview" target="_blank">Global Precipitation Experiment (GPEX)</a></h3><br />
-								<p style="font-size: 16px">Role: Coordinator</p>
-								<p style="font-size: 14px; color: #fff;">
+								<p style="font-size: 1em">Role: Coordinator</p>
+								<p style="font-size: 1rem; color: #fff;">
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#Global</span>
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px;">#Precip</span>
 								</p>									
@@ -506,8 +513,8 @@
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/FC05_Cover.jpg" alt="" /></a>
 								<h3><a href="https://cw3e.ucsd.edu/arrecon_overview/" target="_blank">Atmospheric River Reconnaissance (AR Recon)</a></h3>
-								<p style="font-size: 16px">Role: Member</p>
-								<p style="font-size: 14px; color: #fff;">
+								<p style="font-size: 1em">Role: Member</p>
+								<p style="font-size: 1rem; color: #fff;">
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#AR</span>
 								</p>	
 							</article>
@@ -528,27 +535,27 @@
 						<h2>Collaboration</h2>
 						<div class="row" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center;">
     						<!-- Row 1: First 4 Icons -->
-    						<article class="col-3 col-12-xsmall work-item" style="flex: 1 1 22%; text-align: center;">
+    						<article class="col-3 col-12-xsmall work-item" style="text-align: center;">
         					<a href="https://www.bas.ac.uk/">
-            						<img src="images/Icon/BAS.jpg" alt="BAS" style="max-width: 100%; height: auto;">
+            						<img src="images/Icon/BAS.jpg" alt="BAS" style="height: auto;">
         					</a>
     						</article>
     
-    						<article class="col-3 col-12-xsmall work-item" style="flex: 1 1 22%; text-align: center;">
+    						<article class="col-3 col-12-xsmall work-item" style="text-align: center;">
         					<a href="https://byrd.osu.edu/">
-            						<img src="images/Icon/BPRC_Logo.jpg" alt="Byrd" style="max-width: 100%; height: auto;">
+            						<img src="images/Icon/BPRC_Logo.jpg" alt="Byrd" style="height: auto;">
         					</a>
     						</article>
     
-    						<article class="col-3 col-12-xsmall work-item" style="flex: 1 1 22%; text-align: center;">
+    						<article class="col-3 col-12-xsmall work-item" style="text-align: center;">
         					<a href="https://www.ciimar.up.pt/">
-            						<img src="images/Icon/Ciimar.jpg" alt="CIIMAR" style="max-width: 100%; height: auto;">
+            						<img src="images/Icon/Ciimar.jpg" alt="CIIMAR" style="height: auto;">
         					</a>
     						</article>
 
-    						<article class="col-3 col-12-xsmall work-item" style="flex: 1 1 22%; text-align: center;">
+    						<article class="col-3 col-12-xsmall work-item" style="text-align: center;">
         					<a href="https://ncar.ucar.edu/">
-            						<img src="images/Icon/NCAR.jpg" alt="NCAR" style="max-width: 100%; height: auto;">
+            						<img src="images/Icon/NCAR.jpg" alt="NCAR" style="height: auto;">
         					</a>
     						</article>
 						</div>
@@ -556,30 +563,30 @@
 						<!-- Row 2: Next 4 Icons -->
 						<div class="row" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
    						<!-- Nwra Icon -->
-    						<article class="col-3 col-12-xsmall work-item" style="flex: 1 1 22%; text-align: center;">
+    						<article class="col-3 col-12-xsmall work-item" style="text-align: center;">
         					<a href="https://www.nwra.com/">
-            						<img src="images/Icon/Nwra.jpg" alt="Nwra" style="max-width: 100%; height: auto;">
+            						<img src="images/Icon/Nwra.jpg" alt="Nwra" style="height: auto;">
         					</a>
     						</article>
 
    						<!-- OSU Icon -->
-    						<article class="col-3 col-12-xsmall work-item" style="flex: 1 1 22%; text-align: center;">
+    						<article class="col-3 col-12-xsmall work-item" style="text-align: center;">
         					<a href="https://www.osu.edu/">
-            						<img src="images/Icon/OSU.jpg" alt="OSU" style="max-width: 100%; height: auto;">
+            						<img src="images/Icon/OSU.jpg" alt="OSU" style="height: auto;">
         					</a>
     						</article>
 
     						<!-- PNNL Icon -->
-    						<article class="col-3 col-12-xsmall work-item" style="flex: 1 1 22%; text-align: center;">
+    						<article class="col-3 col-12-xsmall work-item" style="text-align: center;">
         					<a href="https://www.pnnl.gov/">
-            						<img src="images/Icon/PNNL.jpg" alt="PNNL" style="max-width: 100%; height: auto;">
+            						<img src="images/Icon/PNNL.jpg" alt="PNNL" style="height: auto;">
         					</a>
     						</article>
 
    						<!-- UW_Madison Icon -->
-    						<article class="col-3 col-12-xsmall work-item" style="flex: 1 1 22%; text-align: center;">
+    						<article class="col-3 col-12-xsmall work-item" style="text-align: center;">
         					<a href="https://www.wisc.edu/">
-            						<img src="images/Icon/UW_Madison.jpg" alt="UW_Madison" style="max-width: 100%; height: auto;">
+            						<img src="images/Icon/UW_Madison.jpg" alt="UW_Madison" style="height: auto;">
        						 </a>
     						</article>
 					</div>
