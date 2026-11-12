@@ -2598,6 +2598,10 @@ input, select, textarea {
 		border-radius: 0.35em;
 	}
 
+	#research-spotlights > .row + .row {
+		margin-top: 2em;
+	}
+
 	#six .work-item img {
 		max-width: min(100%, 12rem);
 	}
