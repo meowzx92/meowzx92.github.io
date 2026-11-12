@@ -146,6 +146,10 @@
 		}
 
 		
+		#header .profile-photo {
+			text-align: left;
+		}
+
 		#header .profile-heading {
 			margin-bottom: 2em;
 			text-align: left;
@@ -159,12 +163,35 @@
 
 		#header .profile-role,
 		#header .profile-affiliation {
-			font-size: 0.9em;
+			font-size: 1em;
 			margin: 0;
 		}
 
 		#header .profile-details {
 			text-align: left;
+		}
+
+		#two > .row {
+			align-items: stretch;
+		}
+
+		#two > .row .work-item {
+			align-self: stretch;
+		}
+
+		#two > .row .work-item .image {
+			display: block;
+			width: 100%;
+		}
+
+		#two > .row .work-item h3 {
+			min-height: 3em;
+		}
+
+		@media screen and (max-width: 736px) {
+			#two > .row .work-item h3 {
+				min-height: 0;
+			}
 		}
 
 		.new-paper-label {
@@ -200,7 +227,9 @@
 		<!-- Header -->
 			<header id="header">
    				<div class="inner">
-       					<a href="#" class="image avatar"><img src="images/headshot.jpg" alt="Profile Picture" /></a>
+       					<div class="profile-photo">
+						<a href="#" class="image avatar"><img src="images/headshot.jpg" alt="Profile Picture" /></a>
+						</div>
         				<div class="profile-heading">
         					<h1 class="profile-name"><strong>Xun (Jerry) Zou</strong></h1>
         					<p class="profile-role">Atmospheric Scientist</p>
