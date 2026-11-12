@@ -146,6 +146,27 @@
 		}
 
 		
+		#header .profile-heading {
+			margin-bottom: 2em;
+			text-align: left;
+		}
+
+		#header .profile-name {
+			font-size: 1.6em;
+			line-height: 1.4em;
+			margin: 0 0 0.3em;
+		}
+
+		#header .profile-role,
+		#header .profile-affiliation {
+			font-size: 0.9em;
+			margin: 0;
+		}
+
+		#header .profile-details {
+			text-align: left;
+		}
+
 		.new-paper-label {
 			color: #b22222;
 			font-weight: 700;
@@ -180,19 +201,18 @@
 			<header id="header">
    				<div class="inner">
        					<a href="#" class="image avatar"><img src="images/headshot.jpg" alt="Profile Picture" /></a>
-        				<h1><strong>Xun (Jerry) Zou</strong></h1>
-        				<p style="text-align: left; font-size: 0.9em; margin: 0 0 0.75em 0;">Atmospheric Scientist</p>
-        				<h1>
-        					<a href="https://cw3e.ucsd.edu/">Center for Western Weather and Water Extremes (CW3E)</a><br />
-        					Scripps Institution of Oceanography
-        				</h1>
-        				<p>
+        				<div class="profile-heading">
+        					<h1 class="profile-name"><strong>Xun (Jerry) Zou</strong></h1>
+        					<p class="profile-role">Atmospheric Scientist</p>
+        					<p class="profile-affiliation">Scripps Institution of Oceanography</p>
+        				</div>
+        				<p class="profile-details">
         					Research Areas:<br />
         					Polar Meteorology<br />
         					Extreme Weather<br />
         					Numerical Weather Modeling
         				</p>
-        				<p>
+        				<p class="profile-details">
         					<a href="https://scholar.google.com/citations?user=n-XyvdQAAAAJ&hl=en">Google Scholar</a><br />
         					<a href="https://drive.google.com/file/d/1I6JtWB4j_y0LfP_VXdAFgBURJVMnn3pl/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a>
         				</p>
