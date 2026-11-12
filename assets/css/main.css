@@ -2581,6 +2581,15 @@ input, select, textarea {
 		margin-bottom: 2px;
 	}
 
+	#two > .row .work-item {
+		overflow-wrap: anywhere;
+	}
+
+	#two > .row .work-item .image img {
+		aspect-ratio: 1.7;
+		object-fit: contain;
+	}
+
 	.spotlight-figure {
 		display: block;
 		width: 100%;
