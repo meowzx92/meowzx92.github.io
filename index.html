@@ -51,7 +51,7 @@
             	left: 0;
             	width: 100%;
             	background-color: #2e3a47; /* Slate Blue color */
-            	padding: 0px 0;
+            	padding: 0;
             	z-index: 1000; /* Ensure it stays on top */
             	box-shadow: 0 0px 2px rgba(0, 0, 0, 0.1);
         	}
@@ -66,15 +66,17 @@
         	}
 
         	.top-nav ul li {
-            	margin: 0 18px;
+            	margin: 0 6px;
         	}
 
         	.top-nav ul li a {
             	color: white;
             	text-decoration: none;
-            	font-size: 18px;
+            	display: block;
+            	font-size: 20px;
             	font-weight: 500;
-            	padding: 3px 6px;
+            	padding: 12px 6px;
+            	white-space: nowrap;
             	border-radius: 2px;
             	position: relative;
             	transition: all 0.3s ease-in-out;
@@ -95,63 +97,47 @@
             	box-shadow: 0 -3px 0 0 #5a91cc; /* Active tab underline */
         	}
 
-		@media screen and (min-width: 769px) and (max-width: 1100px) {
-			.top-nav ul li {
-				margin: 0 3px;
-			}
-
-			.top-nav ul li a {
-				font-size: 16px;
-			}
+		.hamburger {
+			display: none;
 		}
 		
 		/* Responsive Design for smaller screens */
-		@media screen and (max-width: 768px) {
-    		/* Adjust the hamburger icon and navigation behavior for mobile */
-    		.top-nav {
-        		position: relative; /* No fixed positioning on mobile */
-    		}
-
+		@media screen and (max-width: 1360px) {
     		.top-nav ul {
-        		position: fixed; /* Keep the list fixed at the top */
-        		top: 60px; /* Ensure it appears below the hamburger icon */
+        		position: absolute;
+        		top: 100%;
         		left: 0;
         		width: 100%;
         		flex-direction: column;
         		text-align: left;
         		background-color: #2e3a47;
-        		display: none; /* Hide by default on mobile */
-        		z-index: 999; /* Ensure it's on top */
+        		display: none;
+        		max-height: calc(100vh - 60px);
+        		overflow-y: auto;
     		}
 
     		.top-nav ul li {
-        	margin: -1; /* Remove margin to avoid gaps */
+        		margin: 0;
     		}
 
     		.top-nav ul li a {
-        	padding: 6px 6px; /* Adjust padding to be smaller for mobile */
-        	font-size: 16px;
-		color: white; /* Text color */
-        	width: 100%; /* Make the links full width for easier clicking/tapping */
+        		padding: 10px 20px;
+        		white-space: normal;
     		}
 			
-		/* Show hamburger icon and menu block on mobile */
         	.hamburger {
-           		display: block; /* Hide by default */
-            	font-size: 40px; /* Larger icon size */
-            	color: white; /* Icon color */
-            	cursor: pointer;
-            	padding: 15px 20px; /* Add padding around the hamburger icon */
-            	background-color: #333; /* Dark grey background for the hamburger */
-            	border: none;
-            	text-align: left;
-            	margin: -1; /* No margin to prevent extra space */
-            	width: 100%; /* Ensure hamburger is wide enough for touch */
-            	box-sizing: border-box; /* Include padding in the total width */
-            	position: fixed; /* Keep the hamburger fixed at the top */
-            	top: 0; /* Position it at the very top */
-            	left: 0;
-            	z-index: 1000; /* Ensure it stays on top of the navigation */
+            		display: block;
+            		width: 100%;
+            		height: auto;
+            		padding: 10px 20px;
+            		background: #2e3a47;
+            		border: 0;
+            		border-radius: 0;
+            		box-shadow: none;
+            		color: white;
+            		font-size: 32px;
+            		line-height: 1.25;
+            		text-align: left;
         	}
 
     		.top-nav.active ul {
@@ -190,12 +176,12 @@
 			<div style="text-align: left;">
 			<nav class="top-nav">
 				<!-- Hamburger Icon -->
-        			<div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-    				<ul>
+        			<button type="button" class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navigation-links">&#9776;</button>
+    				<ul id="navigation-links">
 					<li><a href="#one">Overview</a></li>
 					<li><a href="#research-spotlights">Research Spotlights</a></li>
         				<li><a href="#two">Research Projects</a></li>
-        				<li><a href="#three">Publication Lists</a></li>
+        				<li><a href="#three">Publications</a></li>
 					<li><a href="#four">Field Campaigns</a></li>
         				<li><a href="#five">Real-time AR Forecast</a></li>
         				<li><a href="#six">Collaboration</a></li>
@@ -210,7 +196,7 @@
    				<!-- One -->
     				<section id="one">
 					<header class="major" style="text-align: center; padding: 20px 20px; background-color: #f4f4f4; border-radius: 8px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); margin-top: 50px">
-   					<h2 style="font-size: 2.1rem; color: #333; margin-bottom: 15px; margin-top: 20px;">
+   					<h2 style="font-size: 2.1rem; margin-bottom: 15px; margin-top: 20px;">
         					Extreme Weather over Antarctica and Beyond<br />
         					Growing Influence of Atmospheric Rivers
     					</h2>
@@ -231,7 +217,6 @@
                 				large amounts of moisture. These complex dynamics create significant uncertainty 
                 				in future Antarctic ice mass balance and sea level rise (SLR) projections. 
             				</p>
-            				<img class="overview-figure" src="images/fulls/Schematic_Plot.jpg" alt="Figure 1">
         			</div>
         
         			<div style="text-align: left;">
@@ -242,20 +227,35 @@
 					on the <b>characteristics of the AR</b>, whether it is a singular extreme event or part of a <b>sequence of events</b>, and how it 
 					<b>interacts with pre-existing weather systems</b>.
             			</p>
-            			<img class="overview-figure" src="images/fulls/FlowChart.jpg" alt="Figure 2">
         			</div>  
-        
+
+				<div class="row gtr-50 gtr-uniform">
+					<div class="col-6 col-12-small">
+						<img class="overview-figure" src="images/fulls/Schematic_Plot.jpg" alt="Figure 1">
+					</div>
+					<div class="col-6 col-12-small">
+						<img class="overview-figure" src="images/fulls/FlowChart.jpg" alt="Figure 2">
+					</div>
+				</div>
 
 				<p style="margin-top: 15px; color: black; font-size: 1.3rem;">
     					My research focuses on extreme weather events in Antarctica and beyond, investigating their 
-    					<b>dynamic and thermodynamic processes</b> and <b>compound impacts</b> at both global and regional scales.<br /><br />
-    					Drawing on expertise in polar regions and the United States, I aim to address the complex challenges posed by climate variability 
-    					and change, particularly in coastal areas vulnerable to sea level rise and extreme weather. By integrating regional climate models, 
-    					reanalysis datasets, and satellite and ground-based observations, my research will enhance the understanding of natural hazards 
-					such as <b>flooding, high-wind damage, and glacial failure</b>. Additionally, it will assess the vulnerability of affected regions and 
-					support adaptation efforts in response to climate change.
-					</p>
-				<img class="overview-figure" src="images/fulls/Cover3.jpg" alt="Figure 3">
+    					<b>dynamic and thermodynamic processes</b> and <b>compound impacts</b> at both global and regional scales.
+				</p>
+				<div class="row gtr-50 gtr-uniform">
+					<div class="col-6 col-12-small">
+						<img class="overview-figure" src="images/fulls/Cover3.jpg" alt="Figure 3">
+					</div>
+					<div class="col-6 col-12-small">
+						<p style="color: black; font-size: 1.3rem;">
+    							Drawing on expertise in polar regions and the United States, I aim to address the complex challenges posed by climate variability
+    							and change, particularly in coastal areas vulnerable to sea level rise and extreme weather. By integrating regional climate models,
+    							reanalysis datasets, and satellite and ground-based observations, my research will enhance the understanding of natural hazards
+							such as <b>flooding, high-wind damage, and glacial failure</b>. Additionally, it will assess the vulnerability of affected regions and
+							support adaptation efforts in response to climate change.
+						</p>
+					</div>
+				</div>
     				</section>
 
 				<!-- Research spotlights -->
@@ -289,7 +289,7 @@
 					<section id="two">
 						<h2>Research Projects</h2>
 						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
+							<article class="col-6 work-item">
 								<a href="images/fulls/RP01.jpg" class="image fit thumb"><img src="images/thumbs/RP01_Cover.jpg" alt="" /></a>
 								<h3>1. Surface Melting Over Antarctica</h3>
 								<p style="font-size: 1em">NSF OPP <a href="https://www.usap-dc.org/view/project/p0010295" target="_blank">#2229392</a> and <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2331992&HistoricalAwards=false" target="_blank">#2331992</a></p>
@@ -303,7 +303,7 @@
 								</p>
 							</article>
 							
-							<article class="col-6 col-12-xsmall work-item">
+							<article class="col-6 work-item">
 								<a href="images/fulls/RP02.jpg" class="image fit thumb"><img src="images/thumbs/RP02_Cover.jpg" alt="" /></a>
 								<h3>2. Antarctica Under Global Climate Change </h3>
 								<p style="font-size: 1em">Collaborated with Ohio State </p>
@@ -315,18 +315,18 @@
 								</p>
 							</article>
 							
-							<article class="col-6 col-12-xsmall work-item">
+							<article class="col-6 work-item">
 								<a href="images/fulls/RP03.jpg" class="image fit thumb"><img src="images/thumbs/RP03_Cover.jpg" alt="" /></a>
 								<h3>3. Surface Energy Balance (SEB) Observations</h3>
 								<p style="font-size: 1em">NSF OPP <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2331992&HistoricalAwards=false" target="_blank">#2331992</a> & UW-Madison</p>
-								<a href="https://www.antarcticglaciers.org/glacier-processes/mass-balance/the-surface-energy-balance/" target="_blank">Why are SEB observations important?</a>
+								<a href="https://doi.org/10.1175/JCLI-D-25-0619.1" target="_blank" rel="noopener noreferrer">Zou et al. 2026c</a>
 								<p style="font-size: 1rem; color: #fff;">
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px; margin-right: 5px;">#SEB</span>
     									<span style="background-color: #72757d; padding: 3px 15px; border-radius: 3px;">#AWSnetwork</span>
 								</p>
 							</article>
 							
-							<article class="col-6 col-12-xsmall work-item">
+							<article class="col-6 work-item">
 								<a href="images/fulls/RP04.jpg" class="image fit thumb"><img src="images/thumbs/RP04_Cover.jpg" alt="" /></a>
 								<h3>4. AR-Induced Natural Hazards in the U.S.</h3>
 								<p style="font-size: 1em">Supported by CW3E</p>
@@ -338,7 +338,7 @@
 								</p>
 							</article>
 							
-							<article class="col-6 col-12-xsmall work-item">
+							<article class="col-6 work-item">
 								<a href="images/fulls/RP05.jpg" class="image fit thumb"><img src="images/thumbs/RP05_Cover.jpg" alt="" /></a>
 								<h3>5. AR-related Extreme Weather over Antarctica </h3>
 								<p style="font-size: 1em">Pending at NSF OPP</p>
@@ -349,7 +349,7 @@
 								</p>
 							</article>
 							
-							<article class="col-6 col-12-xsmall work-item">
+							<article class="col-6 work-item">
 								<a href="images/thumbs/Coming_UP.jpg" class="image fit thumb"><img src="images/thumbs/RP06_Cover.jpg" alt="" /></a>
 								<h3>6. Expand to the Southern High Latitudes</h3>
 								<p style="font-size: 1em">In Prep</p>
@@ -386,7 +386,7 @@
 				
 				<!-- Three -->
 					<section id="three">
-						<h2>Publication Lists</h2>
+						<h2>Publications</h2>
 						<ul>
 							<li><u>Zou et al. (2026c)</u>: "Polar-WRF evaluation at Siple Dome in West Antarctica: Fidelity of a double-moment mixed-phase cloud parameterization" <i>J. Clim.</i>, <a href="https://doi.org/10.1175/JCLI-D-25-0619.1" target="_blank">https://doi.org/10.1175/JCLI-D-25-0619.1</a>.</li>
 							<li><u>Zou et al. (2026b)</u>: "Föhn-induced melting over Larsen C modulated by atmospheric river shape, direction and landfall location." <i>Nat. Commun.</i>, <a href="https://doi.org/10.1038/s41467-026-71359-2" target="_blank">https://doi.org/10.1038/s41467-026-71359-2</a>.</li>
@@ -629,7 +629,8 @@
         			// Function to toggle the mobile menu when the hamburger icon is clicked
         			function toggleMenu() {
             			const nav = document.querySelector('.top-nav');
-            			nav.classList.toggle('active'); // Toggle the 'active' class to show/hide the menu
+            			const isOpen = nav.classList.toggle('active');
+            			nav.querySelector('.hamburger').setAttribute('aria-expanded', String(isOpen));
         			}
 
         			// JavaScript to handle active class toggle when the user clicks on a link
@@ -638,6 +639,8 @@
             				link.addEventListener('click', function() {
                 				links.forEach(item => item.classList.remove('active')); // Remove active class from all links
                 				this.classList.add('active'); // Add active class to the clicked link
+						document.querySelector('.top-nav').classList.remove('active');
+						document.querySelector('.hamburger').setAttribute('aria-expanded', 'false');
             				});
         			});
     			</script>

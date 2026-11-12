@@ -2581,6 +2581,15 @@ input, select, textarea {
 		margin-bottom: 2px;
 	}
 
+	#two > .row .work-item {
+		overflow-wrap: anywhere;
+	}
+
+	#two > .row .work-item .image img {
+		aspect-ratio: 1.7;
+		object-fit: contain;
+	}
+
 	.spotlight-figure {
 		display: block;
 		width: 100%;
@@ -2714,6 +2723,12 @@ input, select, textarea {
 
 		#main a {
 			overflow-wrap: anywhere;
+		}
+
+		#main > section > h2,
+		#main > section > header.major h2 {
+			color: #2e3a47;
+			font-weight: 700;
 		}
 
 		#main > section {
