@@ -2598,6 +2598,10 @@ input, select, textarea {
 		border-radius: 0.35em;
 	}
 
+	#research-spotlights > .row + .row {
+		margin-top: 2em;
+	}
+
 	#six .work-item img {
 		max-width: min(100%, 12rem);
 	}
@@ -2727,7 +2731,7 @@ input, select, textarea {
 
 		#main > section > h2,
 		#main > section > header.major h2 {
-			color: #2e3a47;
+			color: #17365d;
 			font-weight: 700;
 		}
 
