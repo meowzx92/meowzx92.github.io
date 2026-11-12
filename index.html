@@ -194,6 +194,27 @@
 			}
 		}
 
+		.forecast-frame {
+			width: 100%;
+			height: 80vh;
+			min-height: 540px;
+			max-height: 900px;
+		}
+
+		.forecast-frame iframe {
+			display: block;
+			width: 100%;
+			height: 100%;
+			border: 0;
+		}
+
+		@media screen and (max-width: 736px) {
+			.forecast-frame {
+				height: 75vh;
+				min-height: 420px;
+			}
+		}
+
 		.new-paper-label {
 			color: #b22222;
 			font-weight: 700;
@@ -639,10 +660,12 @@
 				<!-- Five -->
 					<section id="five">
 						<h2>Real-time Antarctic AR Forecast</h2>
-						<a href="https://cw3e.ucsd.edu/arscale_antarctica/">Direct to the Website</a><br />
-    							<iframe src="https://cw3e.ucsd.edu/arscale_antarctica/" width="100%" height="600px" style="border:none;">
-        							Your browser does not support iframes.
-    							</iframe>
+						<p><a href="https://cw3e.ucsd.edu/arscale_antarctica/" target="_blank" rel="noopener noreferrer">Open the full forecast website</a></p>
+						<div class="forecast-frame">
+							<iframe src="https://cw3e.ucsd.edu/arscale_antarctica/" title="Interactive real-time Antarctic atmospheric-river forecast" loading="lazy">
+								<p>Your browser does not support embedded websites. <a href="https://cw3e.ucsd.edu/arscale_antarctica/">Open the forecast website</a>.</p>
+							</iframe>
+						</div>
 					</section>
 				
 				<!-- Six -->
