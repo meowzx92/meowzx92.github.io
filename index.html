@@ -146,6 +146,23 @@
 		}
 
 		
+		.new-paper-label {
+			color: #b22222;
+			font-weight: 700;
+		}
+
+		.spotlight-row {
+			align-items: center;
+			margin-bottom: 3rem;
+		}
+
+		.spotlight-figure {
+			display: block;
+			width: 100%;
+			height: 240px;
+			object-fit: cover;
+		}
+
 		/* Smooth scrolling */
         	html {
             		scroll-behavior: smooth;
@@ -158,15 +175,21 @@
 			<header id="header">
    				<div class="inner">
        					<a href="#" class="image avatar"><img src="images/headshot.jpg" alt="Profile Picture" /></a>
-        				<h1><strong>Xun (Jerry) Zou, Atmospheric Scientist</strong></h1>
+        				<h1><strong>Xun (Jerry) Zou</strong></h1>
+        				<p style="text-align: left; font-size: 0.9em; margin: 0 0 0.75em 0;">Atmospheric Scientist</p>
         				<h1>
-            					<a href="https://cw3e.ucsd.edu/">Center for Western Weather and Water Extremes (CW3E)</a><br />
-            					Scripps Institution of Oceanography<br /><br />
+        					<a href="https://cw3e.ucsd.edu/">Center for Western Weather and Water Extremes (CW3E)</a><br />
+        					Scripps Institution of Oceanography
         				</h1>
         				<p>
-            					Research Areas: Polar Meteorology, Extreme Weather, Numerical Weather Modeling<br />
-						<a href="https://scholar.google.com/citations?user=n-XyvdQAAAAJ&hl=en">Google Scholar</a><br />
-						<a href="https://drive.google.com/file/d/1I6JtWB4j_y0LfP_VXdAFgBURJVMnn3pl/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a>
+        					Research Areas:<br />
+        					Polar Meteorology<br />
+        					Extreme Weather<br />
+        					Numerical Weather Modeling
+        				</p>
+        				<p>
+        					<a href="https://scholar.google.com/citations?user=n-XyvdQAAAAJ&hl=en">Google Scholar</a><br />
+        					<a href="https://drive.google.com/file/d/1I6JtWB4j_y0LfP_VXdAFgBURJVMnn3pl/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a>
         				</p>
     				</div>
 			</header>
@@ -184,8 +207,6 @@
         				<li><a href="#three">Publications</a></li>
 					<li><a href="#four">Field Campaigns</a></li>
         				<li><a href="#five">Real-time AR Forecast</a></li>
-        				<li><a href="#six">Collaboration</a></li>
-					<li><a href="#seven">Contact</a></li>
         				<!-- Add other sections as needed -->
     				</ul>
 				</nav>
@@ -261,20 +282,17 @@
 				<!-- Research spotlights -->
 				<section id="research-spotlights">
 					<h2>Research Spotlights</h2>
-					<div class="row">
+					<div class="row spotlight-row">
 						<div class="col-4 col-12-small">
 							<img class="spotlight-figure" src="images/fulls/research-spotlight-larsen-c.png"
 							     alt="3D simulations of temperature and water vapor mixing ratio over Larsen C" />
 						</div>
 						<div class="col-8 col-12-small">
-							<h3>New paper: Föhn-induced melting over Larsen C</h3>
+							<h3><span class="new-paper-label">New paper!</span>: Föhn-induced melting over Larsen C</h3>
 							<p>
-								Atmospheric rivers can strengthen föhn warming over the
-								Antarctic Peninsula, but their effects on the Larsen C Ice
-								Shelf depend on their shape, direction, and landfall location.
-								High-resolution simulations identify four atmospheric-river
-								patterns and show how they influence surface warming and
-								melting.
+								Atmospheric rivers can strengthen föhn warming over the Antarctic Peninsula.
+								High-resolution simulations show that their shape, direction, and landfall
+								location determine how strongly they warm and melt the Larsen C Ice Shelf.
 							</p>
 							<p>
 								<a href="https://doi.org/10.1038/s41467-026-71359-2"
@@ -283,23 +301,42 @@
 							</p>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row spotlight-row">
 						<div class="col-4 col-12-small">
 							<img class="spotlight-figure" src="images/fulls/research-spotlight-siple-dome.png"
-							     alt="Polar-WRF, ERA5, and observed net radiative flux and cloud fraction at Siple Dome in December 2019 and January 2020" />
+							     alt="Polar-WRF, ERA5, and observed radiative flux and cloud fraction at Siple Dome" />
 						</div>
 						<div class="col-8 col-12-small">
-							<h3>Polar-WRF evaluation at Siple Dome in West Antarctica: Fidelity of a double-moment mixed-phase cloud parameterization</h3>
+							<h3><span class="new-paper-label">New paper!</span>: Polar-WRF evaluation on cloud parameterization</h3>
 							<p>
-								This study evaluates Polar-WRF at Siple Dome in West Antarctica,
-								focusing on a double-moment mixed-phase cloud parameterization.
-								The figure compares net radiative flux and cloud fraction from
-								Polar-WRF, ERA5, and observations.
+								This study evaluates a double-moment mixed-phase cloud parameterization in
+								Polar-WRF at Siple Dome, West Antarctica. Modelled radiative fluxes and
+								cloud cover are compared with ERA5 reanalysis and observations.
 							</p>
 							<p>
 								<a href="https://doi.org/10.1175/JCLI-D-25-0619.1"
 								   target="_blank" rel="noopener noreferrer">Read the paper</a>
 								· <i>Journal of Climate</i> (2026)
+							</p>
+						</div>
+					</div>
+					<div class="row spotlight-row">
+						<div class="col-4 col-12-small">
+							<img class="spotlight-figure" src="images/fulls/Schematic_Plot.jpg"
+							     alt="Schematic illustration of atmospheric river moisture transport" />
+						</div>
+						<div class="col-8 col-12-small">
+							<h3>A Case Study of an Exceptional Atmospheric River and Explosively Deepening Cyclone Over the US Central Plains in March 2019</h3>
+							<p>
+								A March 2019 atmospheric river from the Gulf of Mexico helped rapidly deepen
+								a Colorado cyclone. Simulations show that latent heating strengthened the
+								storm and its moisture transport, while changes to atmospheric-river intensity
+								did not produce a linear change in cyclone weakening.
+							</p>
+							<p>
+								<a href="https://doi.org/10.1029/2024JD042309"
+								   target="_blank" rel="noopener noreferrer">Read the paper</a>
+								· <i>Journal of Geophysical Research: Atmospheres</i> (2025)
 							</p>
 						</div>
 					</div>
