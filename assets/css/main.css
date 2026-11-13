@@ -2593,7 +2593,6 @@ input, select, textarea {
 	.spotlight-figure {
 		display: block;
 		width: 100%;
-		max-width: 26rem;
 		height: auto;
 		border-radius: 0.35em;
 	}
